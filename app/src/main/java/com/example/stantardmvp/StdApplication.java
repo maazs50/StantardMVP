@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.multidex.MultiDexApplication;
 
 import com.example.stantardmvp.network.BaseRetrofitHandler;
-import com.example.stantardmvp.network.CallBackHandler;
 
 public class StdApplication extends MultiDexApplication {
     private static final String TAG = StdApplication.class.getSimpleName();
@@ -25,8 +24,6 @@ public class StdApplication extends MultiDexApplication {
         sAppContext = this;
 
         BaseRetrofitHandler.getInstance().setupRetrofitAndOkHttp();
-        synchronized (CallBackHandler.getInstance()) {
-        }
     }
 /*    public void setConnectivityListener(NetworkChangeReceiver.ConnectivityReceiverListener listener) {
         NetworkChangeReceiver.connectivityReceiverListener = listener;
